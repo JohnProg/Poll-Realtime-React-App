@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import io from 'socket.io-client';
+import _ from 'lodash';
 
 import Header from './Header';
 
@@ -38,8 +39,19 @@ class App extends Component {
   render() {
     return (
       <Header title={this.state.title} status={this.state.connected}/>
+      {_.isNull(this.props.children) ? null : React.cloneElement(
+                    this.props.children, {title: this.state.title, status: this.state.connected}
+                )}
     )
   }
 }
+
+App.propTypes = {
+    children: React.PropTypes.node
+};
+
+App.defaultProps = {
+    children: null
+};
 
 export default App;
