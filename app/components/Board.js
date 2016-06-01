@@ -12,7 +12,7 @@ class Board extends Component {
 }
 
 Board.propTypes = {
-  title: React.PropTypes.string.isRequired
+  title: React.PropTypes.string
 };
 
 export default Board;

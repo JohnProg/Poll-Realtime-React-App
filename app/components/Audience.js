@@ -12,7 +12,7 @@ class Audience extends Component {
 }
 
 Audience.propTypes = {
-  title: React.PropTypes.string.isRequired
+  title: React.PropTypes.string
 };
 
 export default Audience;

@@ -1,3 +1,5 @@
+'use strict';
+
 import React, { Component } from 'react';
 import io from 'socket.io-client';
 import _ from 'lodash';
@@ -35,13 +37,18 @@ class App extends Component {
   welcome(serverState) {
     this.setState({title: serverState.title});
   }
-
+  /**
+   * render
+   * @returns {XML}
+   */
   render() {
     return (
-      <Header title={this.state.title} status={this.state.connected}/>
-      {_.isNull(this.props.children) ? null : React.cloneElement(
+      <div>
+        <Header {...this.state} />
+        {_.isNull(this.props.children) ? null : React.cloneElement(
                     this.props.children, {title: this.state.title, status: this.state.connected}
                 )}
+      </div>
     )
   }
 }

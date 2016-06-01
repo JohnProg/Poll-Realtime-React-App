@@ -12,7 +12,7 @@ class Speaker extends Component {
 }
 
 Speaker.propTypes = {
-  title: React.PropTypes.string.isRequired
+  title: React.PropTypes.string
 };
 
 export default Speaker;
