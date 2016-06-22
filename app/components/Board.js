@@ -3,16 +3,8 @@ import React, { Component } from 'react';
 class Board extends Component {
 
     render() {
-        return (
-          <header>
-            <h1>Board: {this.props.title}</h1>
-          </header>
-        )
+        return (<h1> Board : {this.props.dance}</h1>);
     }
 }
-
-Board.propTypes = {
-  title: React.PropTypes.string
-};
 
 export default Board;

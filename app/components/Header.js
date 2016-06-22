@@ -5,7 +5,7 @@ class Header extends Component {
     render() {
         return (
           <header>
-            <h1>{this.props.title}</h1>
+            <h1>{this.props.title} {this.props.status}</h1>
           </header>
         )
     }
